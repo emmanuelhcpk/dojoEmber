@@ -1,0 +1,13 @@
+<article class="listing">
+  <h3>Títulos</h3>
+  {{input class="form-control" value=model.title}}
+  <div class="form-group">
+    <label for="content">Contenido</label>
+    {{textarea class="form-control" rows="5" value=model.body}}
+  </div>
+  <button {{action 'savePost' model}} class="btn btn-success">Save</button>
+  <button {{action 'deletePost' model.id}} class="btn btn-danger">Delete</button>
+  <button {{action 'refreshPost' model.id}} class="btn btn-info">Restore</button>
+  {{#link-to 'list' class="btn btn-warning"}}Ver Lista {{/link-to}}
+</article>
+{{outlet}}

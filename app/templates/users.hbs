@@ -1,0 +1,18 @@
+<div class="jumbo">
+  <h2>Mira los usuarios</h2>
+  {{#link-to 'index' class="btn btn-warning"}}
+    Volver al inicio
+  {{/link-to}}
+  {{#each model as |user|}}
+  <article class="listing">
+    <span></span><h3>{{user.name}}</h3>
+    <div class="detail owner">
+      {{user.email}}
+    </div> 
+    {{#link-to 'user-posts' user.id class="btn btn-success"}}
+      ver
+    {{/link-to}}   
+  </article>
+{{/each}}
+</div>
+
